@@ -1,20 +1,26 @@
-<h1>Contact Us</h1>
-<p>We would love to hear from you! Please fill out the form below to get in touch with us.</p>
-<p>If you have any questions, suggestions, or feedback, feel free to reach out.</p>
-<p>Your input is valuable to us, and we appreciate your interest in connecting with our community.</p>
-<p>We look forward to hearing from you!</p>
+<%- include("../partials/header") %>
+
+<main class="container">
+  <h1><b>Contact Us</b></h1>
+  <p>We would love to hear from you! Please fill out the form below to get in touch with us.</p>
+  <p>If you have any questions, suggestions, or feedback, feel free to reach out.</p>
+  <p>Your input is valuable to us, and we appreciate your interest in connecting with our community.</p><br>
+  <p>We look forward to hearing from you!</p>
 
 
-<form method="POST" action="/contact">
+  <form method="POST" action="/contact">
 
-  <label for="name">Name:</label><br />
-  <input type="text" name="name" placeholder="Your Name" required /><br />
+    <label for="name">Name:</label><br />
+    <input type="text" name="name" placeholder="Your Name" required /><br />
 
-  <label for="email">Email:</label><br />
-  <input type="email" name="email" placeholder="Your Email" required /><br />
+    <label for="email">Email:</label><br />
+    <input type="email" name="email" placeholder="Your Email" required /><br />
 
-  <label for="message">Message:</label><br />
-  <textarea name="message" placeholder="Your Message" required></textarea><br />
-  
-  <button type="submit">Send</button>
-</form>
+    <label for="message">Message:</label><br />
+    <textarea name="message" placeholder="Your Message" required></textarea><br />
+    
+    <button type="submit">Send</button>
+  </form>
+</main>
+
+<%- include("../partials/footer") %>

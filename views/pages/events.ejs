@@ -1,52 +1,58 @@
-<h1>Upcoming Events</h1>
-<p>Check out what's happening soon!</p>
-<p>Join us for our upcoming events and activities. We have something for everyone!</p>
-<p>Whether you're interested in workshops, social gatherings, or community service, we have a variety of events planned.</p>
-<p>Stay tuned for more details and mark your calendars!</p>
-<p>We look forward to seeing you there!</p>
+<%- include("../partials/header") %>
 
-<div class="events-container">
-  <% events.forEach(event => { %>
-    <div class="event-card">
-     
-      <h2><%= event.title %></h2>
-      <% if (event.details) { %>
-        <p><strong>Details:</strong> <%= event.details %></p>
-      <% } %>
-      <p><strong>Date:</strong> <%= event.date %></p>
-      <p><strong>Time:</strong> <%= event.time %></p>
-      <p><strong>Organizer:</strong> <%= event.organizer %></p>
-      <p><strong>Location:</strong> <%= event.location %></p>
-      <p><strong>Description:</strong> <%= event.description %></p>
-      <p><strong>Agenda:</strong> This event includes networking, sessions, and Q&A.</p>
+<main class="container">
+  <h1><b>Upcoming Events</b></h1>
+  <p>Check out what's happening soon!</p>
+  <p>Join us for our upcoming events and activities. We have something for everyone!</p>
+  <p>Whether you're interested in workshops, social gatherings, or community service, we have a variety of events planned.</p>
+  <p>Stay tuned for more details and mark your calendars!</p>
+  <p>We look forward to seeing you there!</p><br><br>
 
-      <!-- Registration dropdown -->
-      <div class="registration-dropdown">
-        <button onclick="toggleDropdown('<%= event.title %>')">Register</button>
-        <div id="dropdown-<%= event.title %>" class="dropdown-content" style="display: none;">
-          <form method="POST" action="/register">
-            <input type="hidden" name="eventTitle" value="<%= event.title %>">
-            <label for="name">Name:</label><br />
-            <input type="text" id="name" name="name" placeholder="Your Name" required /><br />
+  <div class="events-container">
+    <% events.forEach(event => { %>
+      <div class="event-card">
+        <img src="<%= event.image %>" alt="<%= event.name %>" />
+        <h2><%= event.title %></h2>
+        <% if (event.details) { %>
+          <p><strong>Details:</strong> <%= event.details %></p>
+        <% } %>
+        <p><strong>Date:</strong> <%= event.date %></p>
+        <p><strong>Time:</strong> <%= event.time %></p>
+        <p><strong>Organizer:</strong> <%= event.organizer %></p>
+        <p><strong>Location:</strong> <%= event.location %></p>
+        <p><strong>Description:</strong> <%= event.description %></p>
+        <p><strong>Agenda:</strong> This event includes networking, sessions, and Q&A.</p>
 
-            <label for="email">Email:</label><br />
-            <input type="email" id="email" name="email" placeholder="Your Email" required /><br />
+        <!-- Registration dropdown -->
+        <div class="registration-dropdown">
+          <button onclick="toggleDropdown('<%= event.title %>')">Register</button>
+          <div id="dropdown-<%= event.title %>" class="dropdown-content" style="display: none;">
+            <form method="POST" action="/register">
+              <input type="hidden" name="eventTitle" value="<%= event.title %>">
+              <label for="name">Name:</label><br />
+              <input type="text" id="name" name="name" placeholder="Your Name" required /><br />
 
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+              <label for="email">Email:</label><br />
+              <input type="email" id="email" name="email" placeholder="Your Email" required /><br />
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div><br><br>
       </div>
-    </div>
-  <% }) %>
-</div>
+    <% }) %>
+  </div>
 
-<script>
-  function toggleDropdown(title) {
-    const element = document.getElementById(`dropdown-${title}`);
-    if (element.style.display === "none") {
-      element.style.display = "block";
-    } else {
-      element.style.display = "none";
+  <script>
+    function toggleDropdown(title) {
+      const element = document.getElementById(`dropdown-${title}`);
+      if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
     }
-  }
-</script>
+  </script>
+</main>
+
+<%- include("../partials/footer") %>

@@ -7,21 +7,21 @@ const teamInfo = [
       name: "Mia ",
       role: "Backend Developer",
       bio: "Experienced in Node.js and Express, responsible for routing and server setup.",
-      image: "/images/mia.jpg" // Example image path in /public/images
+      image: "/images/Mia.jpg" 
     },
     {
       id: 2,
       name: "Cameron ",
       role: "Frontend Developer",
       bio: "Skilled in EJS and Bootstrap, focused on creating responsive views.",
-      image: "/images/cameron.jpg" // Image path in /public/images
+      image: "/images/Cameron.png" 
     },
     {
       id: 3,
       name: "Bahle ",
       role: "Data & Documentation Manager",
       bio: "Manages data arrays and ensures clear project documentation.",
-      image: "/images/bahle.jpg" // Image path in /public/images
+      image: "/images/Bahle.jpg" 
     }
   ];
   
@@ -35,7 +35,7 @@ const teamInfo = [
       location: "Community Center, Room 101",
       organizer: "Tech Community",
       registrationLink: "https://example.com/register/tech-talk",
-      image: "/images/tech.jpg", // Image path in /public/images
+      image: "/images/TechTalk.png", // Image path in /public/images
       description: "Explore the latest advancements in AI and machine learning."
     },
     {
@@ -46,7 +46,7 @@ const teamInfo = [
       location: "Art Studio, Downtown",
       organizer: "Art Enthusiasts",
       registrationLink: "https://example.com/register/art-workshop",
-      image: "/images/art.jpg",
+      image: "/images/ArtWorkshop.png",
       description: "Hands-on session to create your own masterpiece."
     },
     {
@@ -57,7 +57,7 @@ const teamInfo = [
       location: "City Park",
       organizer: "Local Bands",
       registrationLink: "https://example.com/register/music-festival",
-      image: "/images/music.jpg",
+      image: "/images/MusicFestival.png",
       description: "Live performances from local bands and artists."
     }
   ];
