@@ -29,6 +29,13 @@ The Community Portal showcases
 5. Git & GitHub for version control
 6. Nodemon (for development)
 
+## Screenshots
+<img width="1887" height="861" alt="image" src="https://github.com/user-attachments/assets/27f730b4-27b1-4898-9e3a-6b5c2e172e5e" />
+<img width="1903" height="868" alt="image" src="https://github.com/user-attachments/assets/51aa0b4b-f150-4235-8d84-666561640006" />
+<img width="1883" height="871" alt="image" src="https://github.com/user-attachments/assets/8fb7f760-5bc1-4c85-8939-4032f4249e3a" />
+<img width="1881" height="859" alt="image" src="https://github.com/user-attachments/assets/9bbff30e-9c5f-4428-a2e9-fd9c0050ddf2" />
+
+
 ## Team Members and Roles
 | Name       | Role                        | Responsibility                             |
 |------------|-----------------------------| -------------------------------------------|
